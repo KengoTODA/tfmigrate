@@ -6,7 +6,7 @@ tfmigrate {
       name   = "tfmigrate/history.json"
 
       // mock gcs endpoint with fake-gcs-server
-      endpoint = "http://localhost:4443"
+      endpoint = "http://fake-gcs-server:4443"
     }
   }
 }

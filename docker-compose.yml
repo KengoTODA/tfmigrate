@@ -15,6 +15,7 @@ services:
       TF_PLUGIN_CACHE_DIR: "/tmp/plugin-cache"
     depends_on:
       - localstack
+      - fake-gcs-server
 
   localstack:
     image: localstack/localstack:1.0.3
@@ -27,6 +28,12 @@ services:
       S3_BUCKET: "tfstate-test"
     volumes:
       - "./scripts/localstack:/docker-entrypoint-initaws.d"  # initialize scripts on startup
+
+  fake-gcs-server:
+    image: fsouza/fake-gcs-server:1.38
+    ports:
+      - "4443:4443"
+    command: -scheme http
 
   dockerize:
     image: powerman/dockerize:0.16.3
