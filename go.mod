@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/davecgh/go-spew v1.1.1
-	github.com/google/go-cmp v0.5.2
+	github.com/google/go-cmp v0.5.8
 	github.com/hashicorp/go-version v1.3.0
 	github.com/hashicorp/hcl/v2 v2.6.0
 	github.com/hashicorp/logutils v1.0.0
@@ -13,6 +13,8 @@ require (
 	github.com/mitchellh/cli v1.1.1
 	github.com/spf13/pflag v1.0.2
 )
+
+replace github.com/minamijoyo/tfmigrate-storage => ../tfmigrate-storage
 
 require (
 	github.com/agext/levenshtein v1.2.1 // indirect
@@ -33,7 +35,7 @@ require (
 	github.com/mitchellh/go-wordwrap v0.0.0-20150314170334-ad45545899c7 // indirect
 	github.com/posener/complete v1.1.1 // indirect
 	github.com/zclconf/go-cty v1.2.0 // indirect
-	golang.org/x/sys v0.0.0-20211216021012-1d35b9e2eb4e // indirect
+	golang.org/x/sys v0.0.0-20220624220833-87e55d714810 // indirect
 	golang.org/x/text v0.3.7 // indirect
-	golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543 // indirect
+	golang.org/x/xerrors v0.0.0-20220609144429-65e65417b02f // indirect
 )
