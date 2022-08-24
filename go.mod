@@ -9,12 +9,10 @@ require (
 	github.com/hashicorp/hcl/v2 v2.6.0
 	github.com/hashicorp/logutils v1.0.0
 	github.com/mattn/go-shellwords v1.0.10
-	github.com/minamijoyo/tfmigrate-storage v0.0.0-20220325144224-f6ba9f1d2224
+	github.com/minamijoyo/tfmigrate-storage v0.0.0-20220824073652-6dd8f2fd2948
 	github.com/mitchellh/cli v1.1.1
 	github.com/spf13/pflag v1.0.2
 )
-
-replace github.com/minamijoyo/tfmigrate-storage => ../tfmigrate-storage
 
 require (
 	cloud.google.com/go v0.102.1 // indirect

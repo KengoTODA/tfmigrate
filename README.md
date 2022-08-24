@@ -486,7 +486,6 @@ The `gcs` storage has the following attributes:
 
 - `bucket` (required): Name of the bucket.
 - `name` (required): Path to the migration history file.
-- `endpoint` (optional): URL of the endpoint, useful to use an emulator.
 
 Note that this storage implementation refers the Application Default Credentials (ADC) for authentication.
 
@@ -499,13 +498,12 @@ tfmigrate {
     storage "gcs" {
       bucket = "tfstate-test"
       name   = "tfmigrate/history.json"
-
-      // mock gcs endpoint with fake-gcs-server
-      endpoint = "http://localhost:4443"
     }
   }
 }
 ```
+
+If you want to connect to emulator instead of GCS, set the `STORAGE_EMULATOR_HOST` environment variable as required by the [Go library for GCS](https://pkg.go.dev/cloud.google.com/go/storage).
 
 ## Migration file
 

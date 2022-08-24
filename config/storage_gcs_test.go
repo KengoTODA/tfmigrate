@@ -41,7 +41,6 @@ tfmigrate {
     storage "gcs" {
       bucket   = "tfmigrate-test"
       name     = "tfmigrate/history.json"
-      endpoint = "http://localhost:4443"
     }
   }
 }
@@ -49,7 +48,6 @@ tfmigrate {
 			want: &gcs.Config{
 				Bucket:   "tfmigrate-test",
 				Name:     "tfmigrate/history.json",
-				Endpoint: "http://localhost:4443",
 			},
 			ok: true,
 		},
